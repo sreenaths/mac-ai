@@ -25,3 +25,24 @@ Run Mistral, and view resource utilization
 ```
 /usr/bin/time -lhp python mistral.py
 ```
+
+## Resource utilization
+
+#### M1 Pro - 16 GPU Cores | Metal 3
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Time</th>
+    <th>Peak memory footprint</th>
+  </tr>
+  <tr>
+    <td>LLaMA 2</td>
+    <td>70.50 Sec</td>
+    <td>28763153984</td>
+  </tr>
+  <tr>
+    <td>Mistral</td>
+    <td>79.25</td>
+    <td>21783790848</td>
+  </tr>
+</table>
