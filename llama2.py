@@ -2,6 +2,8 @@ from transformers import AutoTokenizer
 import transformers
 import torch
 
+from yaspin import yaspin
+
 device = "mps"
 model = "meta-llama/Llama-2-7b-chat-hf"
 
@@ -16,13 +18,14 @@ pipeline = transformers.pipeline(
 
 prompt = "I liked 'Breaking Bad' and 'Band of Brothers'. Do you have any recommendations of other shows I might like?"
 print("Prompt: ", prompt)
-sequences = pipeline(
-    prompt,
-    do_sample=True,
-    top_k=10,
-    num_return_sequences=1,
-    eos_token_id=tokenizer.eos_token_id,
-    max_length=200,
-    return_full_text=False
-)
+with yaspin(text="Generating..."):
+  sequences = pipeline(
+      prompt,
+      do_sample=True,
+      top_k=1,
+      num_return_sequences=1,
+      eos_token_id=tokenizer.eos_token_id,
+      max_length=200,
+      return_full_text=False
+  )
 print("Result: ", sequences[0]['generated_text'])
