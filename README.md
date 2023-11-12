@@ -32,12 +32,12 @@ Run Mistral, and view resource utilization
 <table>
   <tr>
     <th>Model</th>
-    <th>Time</th>
-    <th>Peak memory footprint</th>
+    <th>Time (Sec)</th>
+    <th>Peak memory footprint (Bytes)</th>
   </tr>
   <tr>
     <td>LLaMA 2</td>
-    <td>70.50 Sec</td>
+    <td>70.50</td>
     <td>28763153984</td>
   </tr>
   <tr>
