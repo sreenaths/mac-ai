@@ -16,7 +16,7 @@ pipeline = transformers.pipeline(
     device_map=device,
 )
 
-prompt = "I liked 'Breaking Bad' and 'Band of Brothers'. Do you have any recommendations of other shows I might like?"
+prompt = "My favourite condiment is"
 print("Prompt: ", prompt)
 with yaspin(text="Generating..."):
   sequences = pipeline(
